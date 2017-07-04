@@ -1,0 +1,44 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-search{
+  display:inline-block;
+  padding: 3px;
+  position:relative;
+  .search-icon{
+    float: left;
+    cursor: pointer;
+    &:hover{
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+  }
+  form{
+    float: left;
+    .input{
+      border: none 0;
+      color: $blackColor;
+      font-size: $font15;
+      width: 350px;
+      outline: none;
+      margin-left:10px;
+    }
+  }
+  .show-items-box{
+    @include fixed-block;
+    top:25px;
+    .item{
+      line-height:150%;
+      padding:5px;
+      cursor: pointer;
+      color: $darkGrayColor;
+      font-size: $font15;
+      &:hover{
+        background-color:$lightGrayColor;
+      }
+    }
+  }
+}

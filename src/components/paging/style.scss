@@ -1,0 +1,22 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+@import "./../../assets/css/effect.scss";
+
+.ms-paging{
+  color:$darkGrayColor;
+  font-size: $font15;
+  .nums, .btn{display: inline-block;}
+  .btn{
+    padding:7px 12px;
+    border:1px solid $primaryColor;
+    border-right:none 0;
+  }
+  .active{
+    background-color: $primaryColor;
+    color: $whiteColor;
+  }
+  .next{
+    border-right:1px solid $primaryColor;
+  }
+}

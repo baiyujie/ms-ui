@@ -1,0 +1,64 @@
+@import "./color.scss";
+@import "./fontSize.scss";
+@import "./mixin.scss";
+@import "./effect.scss";
+
+*{
+  margin: 0;
+  font-family: "微软雅黑","Microsoft YaHei","Hiragino Sans GB","华文细黑","STHeiti",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  -moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;-khtml-user-select:none;user-select:none;
+}
+input, textarea, .input-prefix, .input-suffix {
+  font-family: "微软雅黑","Microsoft YaHei","Hiragino Sans GB","华文细黑","STHeiti",SimHei,"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+}
+img{border:none 0;}
+a{color: $grayColor; text-decoration: none; @include can-click-inline;display: inline-block;}
+/** 滚动条 **/
+::-webkit-scrollbar{width:0; height: 10px;}
+::-webkit-scrollbar-button:vertical{display: none;}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-corner{background-color: #e2e2e2;}
+::-webkit-scrollbar-thumb{border-radius: 0; background-color: rgba(0,0,0,.3);}
+::-webkit-scrollbar-thumb:vertical:hover{background-color: rgba(0,0,0,.35);}
+::-webkit-scrollbar-thumb:vertical:active{background-color: rgba(0,0,0,.38);}
+// 处理花括号的显示问题
+.ms-controller{
+   visibility: hidden
+}
+.body{
+  @include page-wp100;
+  background-color:$lightGrayColor;
+}
+.page-content{
+  @include block-center;
+}
+// 表单验证样式
+.ms-error{
+  border:1px solid $redColor!important;
+  color: $redColor!important;
+}
+.ms-error-tip{
+  display: inline-table;
+  position: absolute;
+  top:50%;
+  left: 90%;
+  margin-top: -14px;
+  height: 28px;
+  line-height: 28px;
+  background-color: $redColor;
+  color:$whiteColor;
+  font-size:$font14;
+  padding: 0 5px;
+  border-radius: 3px;
+  z-index: 9999;
+  &:after{
+    position: absolute;
+    left:-8px;
+    top:10px;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-right: 8px solid $redColor;
+    border-bottom: 4px solid transparent;
+  }
+}

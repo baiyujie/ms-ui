@@ -1,0 +1,12 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-popconfirm{
+  position: absolute;
+  background-color: $whiteColor;
+  border: 1px solid $borderColor;
+  border-radius:3px;
+  overflow: hidden;
+  padding:15px;
+}

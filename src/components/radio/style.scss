@@ -1,0 +1,30 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-radio{
+  @include height-auto;
+  .radio{
+    float: left;
+    padding: 9px 15px;
+    border:1px solid $borderColor;
+    color: $darkGrayColor;
+    font-size: $font14;
+    margin-right: 10px;
+    border-radius: 3px;
+    &:hover{
+      background-color:$primaryColor;
+      color:$whiteColor;
+      border: 1px solid $primaryColor;
+      cursor: pointer;
+    }
+  }
+  .last{
+    margin-right: 0;
+  }
+  .active{
+    background-color:$primaryColor;
+    color:$whiteColor;
+    border: 1px solid $primaryColor;
+  }
+}

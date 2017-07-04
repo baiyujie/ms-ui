@@ -1,0 +1,57 @@
+@import "./../color.scss";
+@import "./../fontSize.scss";
+@import "./../mixin.scss";
+@import "./../effect.scss";
+
+// 输入框
+form{
+  .item{
+    height: 48px;
+    border-radius: 4px;
+    position: relative;
+    margin-top: 15px;
+    border:1px solid $borderColor;
+    border-radius: 3px;
+    .input{
+      height: 48px;
+      line-height: 48px;
+      padding: 0 10px;
+      outline: 0;
+      border-radius: 4px;
+      font-size: 15px;
+      border: 0;
+      width: 100%;
+      @include box-sizing(border-box);
+    }
+    .short{
+      width: 70%;
+      float: left;
+    }
+    .short-other{
+      width:30%;
+      float: left;
+      box-sizing: border-box;
+      margin-top: 12px;
+    }
+    .short-other.left{
+      border-right: 1px solid $borderColor;
+    }
+    .short-other.right{
+      border-left: 1px solid $borderColor;
+    }
+  }
+}
+// 页尾热点
+.foot{
+  .order{
+    @include height-auto;
+    margin-bottom: 10px;
+    font-size: $font13;
+    color: $grayColor;
+    a{
+      margin-top: 5px;
+      margin-right: 10px;
+      float: left;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-multilevelSelect{
+  width:100%;
+  padding: 3px 15px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  @include box-sizing(border-box);
+  .word{
+    width:100%;
+    color: $blackColor;
+    border:none;
+    cursor: pointer;
+    font-size: $font16;
+  }
+  .word[disabled]{
+    background-color: transparent;
+  }
+  .down{
+    margin-left: 5px;
+    position: absolute;
+    right:15px;
+    top:50%;
+    margin-top: -3px
+  }
+  .wrap{
+    @include fixed-block;
+    @include box-sizing(border-box);
+    padding: 0;
+    top: 25px;
+    font-size: $font15;
+    width:1000px;
+    .group{
+      padding:12px 15px;
+      border-bottom:1px solid $borderColor;
+      @include height-auto;
+      .title{
+        width:80px;
+        height: 28px;
+        line-height: 28px;
+        float: left;
+        @include can-click-inline;
+      }
+      .options{
+        width:800px;
+        float:left;
+        .option{
+          width:100px;
+          float:left;
+          color: $darkGrayColor;
+          line-height: 200%;
+          @include can-click-inline;
+        }
+      }
+    }
+  }
+  .active{
+    color:$primaryColor;
+  }
+}

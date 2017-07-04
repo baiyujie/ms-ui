@@ -1,0 +1,63 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-button{
+  height: 38px;
+  line-height: 38px;
+  padding: 0 18px;
+  font-size: $font15;
+  background-color: transparent;
+  border-radius:5px;
+  @include can-click-inline;
+  outline: none;
+  &:hover{
+    @include opacity(0.7);
+  }
+  &:active{
+    @include opacity(0.5);
+  }
+}
+.ms-button.default{
+  border: 1px solid $defaultBtnColor;
+  color: $darkGrayColor;
+}
+.ms-button.primary{
+  border: 1px solid $primaryColor;
+  color: $primaryColor;
+}
+.ms-button.big{
+  height: 44px;
+  line-height: 44px;
+  padding: 0 20px;
+  font-size: $font16;
+  border-radius:6px;
+}
+.ms-button.small{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: $font13;
+  border-radius:3px;
+}
+.ms-button.default.fill{
+  background-color: $grayColor;
+}
+.ms-button.primary.fill{
+  background-color: $primaryColor;
+  color:$whiteColor;
+}
+.ms-button.big.round{
+  border-radius:22px;
+}
+.ms-button.normal.round{
+  border-radius:19px;
+}
+.ms-button.small.round{
+  border-radius:15px;
+}
+.ms-button.fluid{
+  width: 100%;
+  padding:0;
+  text-align:center;
+}

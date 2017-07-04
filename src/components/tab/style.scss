@@ -1,0 +1,31 @@
+@import "./../../assets/css/color.scss";
+@import "./../../assets/css/fontSize.scss";
+@import "./../../assets/css/mixin.scss";
+
+.ms-tab{
+  color: $grayColor;
+  font-size: $font14;
+  .ms-tab-labels{
+    padding: 8px 0;
+    border-bottom: 1px solid $borderColor;
+    .label{
+      display:inline-block;
+      margin-left: 12px;
+      margin-right: 12px;
+      position:relative;
+      @include can-click-inline;
+      .up{
+        position: absolute;
+        left:50%;
+        bottom: -8px;
+        margin-left: -5px;
+      }
+    }
+    .active{
+      color: $primaryColor;
+    }
+  }
+  .ms-tab-content{
+    padding: 10px 0 0 0;
+  }
+}
